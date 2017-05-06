@@ -1,0 +1,26 @@
+## Metadata
+
+title: Bones
+description: >
+  Bones is a tiny, semantic CSS framework with just the basics.
+
+
+## Locations
+
+includes_dir: /
+
+
+## Build settings
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+## Defaults
+
+defaults:
+  - scope:
+      path: "" # all files in the project
+    values:
+      layout: default
