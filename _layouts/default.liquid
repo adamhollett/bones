@@ -2,15 +2,57 @@
 
 <html>
   <head>
-    <style>
-      {% include bones.css %}
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ site.title }}</title>
+
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="Adam Hollett">
+    <meta name="robots" content="index, follow">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="bones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+
+    <link rel="icon" href="https://png.icons8.com/bone">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://png.icons8.com/bone">
+
+    <meta name="twitter:site" content="{{ site.title }}">
+    <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://png.icons8.com/bone">
   </head>
 
   <body>
     <main>
-      <h1 class="center large">{{ page.title }}</h1>
+      <div class="center">
+        <h1 class="large">{{ site.title }}</h1>
+
+        <p>{{ site.description }}</p>
+
+        <a class="primary button" href="bones.css">CSS</a>
+        <a class="button" href="https://github.com/admhlt/bones">GitHub</a>
+      </div>
+
       {{ content }}
     </main>
+
+    <script>
+      document.getElementById('scale-factor').addEventListener('change', function() {
+        document.documentElement.style.setProperty(`--${this.name}`, this.value)
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
   </body>
 </html>

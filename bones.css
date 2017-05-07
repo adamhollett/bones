@@ -6,7 +6,7 @@
   /* Type and scale */
   --base-font-size: 1.8rem;
   --base-line-height:  1.6;
-  --scale-factor:    1.333;
+  --scale-factor:      1.4;
 
   /* Spaces */
   --space:         calc(var(--base-font-size) * var(--base-line-height));
@@ -14,16 +14,27 @@
   --space-quarter: calc(var(--space) / 4);
 
   /* Typefaces */
-  --sans-serif-font: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  --monospace-font:  Menlo, Monaco, Consolas, monospace;
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-monospace:  Menlo, Monaco, Consolas, monospace;
 
   /* Colors */
-  --color-text:    #1b2733;
-  --color-bg:      #f4f6f8;
-  --color-subdued: #637381;
-  --color-primary: #007ace;
-  --color-success: #50b83c;
-  --color-danger:  #ed6347;
+  --color-text:        rgb( 40,  50,  55);
+  --color-bg:          rgb(250, 250, 250);
+  --color-subdued:     rgb(var(--color-subdued-rgb));
+  --color-white:       rgb(var(--color-white-rgb));
+  --color-black:       rgb(var(--color-black-rgb));
+  --color-primary:     rgb(var(--color-primary-rgb));
+  --color-success:     rgb(var(--color-success-rgb));
+  --color-warning:     rgb(var(--color-warning-rgb));
+  --color-danger:      rgb(var(--color-danger-rgb));
+
+  --color-white-rgb:   255, 255, 255;
+  --color-black-rgb:     0,   0,   0;
+  --color-subdued-rgb: 160, 160, 160;
+  --color-primary-rgb:  65, 165, 245;
+  --color-success-rgb: 100, 185, 105;
+  --color-warning-rgb: 255, 165,  40;
+  --color-danger-rgb:  240,  85,  80;
 }
 
 @media (max-width: 750px) {
@@ -38,7 +49,7 @@
 */
 
 html {
-  font-family: var(--sans-serif-font);
+  font-family: var(--font-sans-serif);
   font-size:   62.5%;
   line-height: var(--base-line-height);
   color:       var(--color-text);
@@ -98,8 +109,8 @@ figure {
 code {
   display: inline-block;
   padding: 0 calc(var(--space) / 5);
-  font-size: 0.8rem;
-  font-family: var(--monospace-font);
+  font-size: 0.8em;
+  font-family: var(--font-monospace);
   background: var(--color-bg);
   border-radius: .3rem;
 }
@@ -153,7 +164,6 @@ h3, .heading-3 {
 }
 
 h4, .heading-4 {
-  font-weight: lighter;
 }
 
 /*
@@ -179,39 +189,39 @@ button, .button {
   padding: calc(var(--space) / 5) var(--space);
   font-size: var(--base-font-size);
   line-height: inherit;
-  color: #fff;
+  color: var(--color-white);
   text-align: center;
   cursor: pointer;
   background: var(--color-subdued);
-  border: .3rem solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(0, 0, 0, 0.4);
-  border-radius: calc(var(--space) / 6);
-  transition: border-color 0.1s ease;
+  border: .2rem solid rgba(var(--color-white-rgb), 0);
+  border-bottom-color: rgba(var(--color-black-rgb), 0.5);
+  border-radius: .4rem;
+  transition: border 0.1s ease;
 }
 
 button:hover, .button:hover,
 button:focus, .button:focus {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(var(--color-white-rgb), 0.5);
 }
 
 button:active, .button:active {
-  transform: translateY(calc(var(--space) / 20));
+  transform: translateY(.1rem);
 }
 
 button.outline, .button.outline {
-  background: none;
-  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(var(--color-white-rgb), 0);
+  border-color: rgba(var(--color-black-rgb), 0.5);
   color: var(--color-text);
 }
 
 button.outline:hover, .button.outline:hover,
 button.outline:focus, .button.outline:focus {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(var(--color-black-rgb), 0.2);
 }
 
 button.clear, .button.clear {
-  background: none;
-  border-color: rgba(255, 255, 255, 0);
+  background: rgba(var(--color-white-rgb), 0);
+  border-color: rgba(var(--color-black-rgb), 0);
   color: var(--color-text);
 }
 
@@ -225,7 +235,7 @@ button.clear:after, .button.clear:after {
 
 button.clear:hover, .button.clear:hover,
 button.clear:focus, .button.clear:focus {
-  border-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(var(--color-black-rgb), 0.5);
 }
 
 button.primary, .button.primary, button[type="submit"] {
@@ -234,6 +244,10 @@ button.primary, .button.primary, button[type="submit"] {
 
 button.success, .button.success {
   background: var(--color-success);
+}
+
+button.warning, .button.warning {
+  background: var(--color-warning);
 }
 
 button.danger, .button.danger {
@@ -282,7 +296,6 @@ input, textarea {
 
 .grid {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -291,20 +304,8 @@ input, textarea {
   flex: 1;
 }
 
-.half {
-  flex: 50%;
-}
-
-.third {
-  flex: 33.33%;
-}
-
-.quarter {
-  flex: 25%;
-}
-
-.fifth {
-  flex: 20%;
+.padded.column {
+  padding: var(--space);
 }
 
 @media (max-width: 750px) {
