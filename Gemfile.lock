@@ -49,6 +49,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2017.2)
       tzinfo (>= 1.0.0)
+    wdm (0.1.1)
 
 PLATFORMS
   x86-mingw32
@@ -57,6 +58,7 @@ DEPENDENCIES
   hawkins
   jekyll (~> 3.4)
   tzinfo-data
+  wdm
 
 RUBY VERSION
    ruby 2.3.3p222
