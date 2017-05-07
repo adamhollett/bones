@@ -55,6 +55,38 @@ Try changing it:
 </div>
 
 
+## Tables
+
+Tables have very little style by default, which is a good thing according to [Darkhorse Analytics](http://www.darkhorseanalytics.com/blog/clear-off-the-table).
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Occupation</th>
+    <th>Age</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td>Bernarda Campbell</td>
+    <td>ID clerk</td>
+    <td>66</td>
+    <td>Davenport, IA</td>
+  </tr>
+  <tr>
+    <td>Janice Wrenn</td>
+    <td>Conciliator</td>
+    <td>40</td>
+    <td>Albany, NY</td>
+  </tr>
+  <tr>
+    <td>Francisco Torres</td>
+    <td>Builder</td>
+    <td>40</td>
+    <td>Jackson, OH</td>
+  </tr>
+</table>
+
+
 ## Buttons
 
 Buttons come in solid, outlined, and clear styles, with different colors for conditional states.
@@ -111,13 +143,13 @@ Buttons come in solid, outlined, and clear styles, with different colors for con
 </div>
 
 ``` html
-<button class="primary">Button</button>
+<button class="primary">Apples</button>
 
-<button class="success">Button</button>
+<button class="success">Oranges</button>
 
 <button class="warning">Peaches</button>
 
-<button class="danger">Button</button>
+<button class="danger">Plums</button>
 ```
 
 
@@ -126,14 +158,32 @@ Buttons come in solid, outlined, and clear styles, with different colors for con
 Forms have basic, accessible styles.
 
 <form>
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name">
+  <label>
+    Name
+    <input type="text" id="name" name="name">
+  </label>
 
-  <label for="name">Email</label>
-  <input type="text" id="email" name="email">
+  <label>
+    Email
+    <input type="text" id="email" name="email" required>
+  </label>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message"></textarea>
+  <label>
+    Age range
+    <select>
+      <option value="0–10">0–10</option>
+      <option value="11–20">11–20</option>
+      <option value="21–30">21–30</option>
+      <option value="31–40">31–40</option>
+      <option value="41–50">41–50</option>
+      <option value="50+">50+</option>
+    </select>
+  </label>
+
+  <label>
+    Message
+    <textarea id="message" name="message" required></textarea>
+  </label>
 
   <button type="submit">Submit</button>
 </form>
