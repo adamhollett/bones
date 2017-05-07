@@ -9,7 +9,7 @@
     <title>{{ site.title }}</title>
 
     <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="Adam Hollett">
+    <meta name="author" content="{{ site.author }}">
     <meta name="robots" content="index, follow">
     <meta name="mobile-web-app-capable" content="yes">
 
@@ -44,6 +44,8 @@
         <a class="button" href="https://github.com/admhlt/bones">GitHub</a>
       </div>
 
+      <hr>
+
       {{ content }}
     </main>
 
@@ -55,4 +57,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
   </body>
+
+  <footer class="center small">
+    Made with <span style="color: var(--color-danger)">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
+  </footer>
 </html>
