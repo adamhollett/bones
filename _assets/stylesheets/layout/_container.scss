@@ -1,0 +1,9 @@
+////
+/// Container
+////
+
+.container {
+  max-width: calc(var(--base-font-size) * 52);
+  padding: var(--space);
+  margin: 0 auto;
+}

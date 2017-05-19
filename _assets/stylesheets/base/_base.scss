@@ -1,0 +1,76 @@
+////
+/// Base
+////
+
+html {
+  font-family: var(--font-sans-serif);
+  font-size:   62.5%;
+  line-height: var(--base-line-height);
+  color:       var(--color-text);
+  box-sizing:  border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: var(--base-font-size);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: .1rem solid var(--color-primary);
+  transition: color 0.1s ease;
+
+  &:hover:not(.button) {
+    color: var(--color-primary);
+  }
+}
+
+p, ul, ol, table, blockquote, pre {
+  margin-top: 0;
+  margin-bottom: var(--space);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: var(--space-half);
+  margin: var(--space) auto;
+  background: var(--color-bg);
+}
+
+blockquote {
+  padding-left: var(--space);
+  margin-left: 0;
+  color: var(--color-subdued);
+  border-left: .3rem solid var(--color-subdued);
+}
+
+figure {
+  margin: 0;
+}
+
+code {
+  display: inline-block;
+  padding: 0 calc(var(--space) / 5);
+  font-size: 0.8em;
+  font-family: var(--font-monospace);
+  background: var(--color-bg);
+  border-radius: .3rem;
+}
+
+pre {
+  padding: var(--space-half);
+  background: var(--color-bg);
+}
+
+hr {
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+  border: .1rem solid var(--color-bg);
+}

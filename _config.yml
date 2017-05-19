@@ -15,6 +15,14 @@ includes_dir: /
 exclude:
   - Gemfile
   - Gemfile.lock
+  - bones.css
+
+
+## Assets
+
+assets:
+  cache_type: memory
+  prefix: ''
 
 
 ## Defaults

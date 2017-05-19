@@ -1,0 +1,38 @@
+////
+/// Typography
+////
+
+h1, .heading-1,
+h2, .heading-2,
+h3, .heading-3,
+h4, .heading-4 {
+  font-weight: normal;
+  line-height: calc(var(--base-line-height) * 0.75);
+}
+
+h1, .heading-1 {
+  font-size: calc(
+    var(--base-font-size)
+    * var(--scale-factor)
+    * var(--scale-factor)
+    * var(--scale-factor)
+  );
+}
+
+h2, .heading-2 {
+  font-size: calc(
+    var(--base-font-size)
+    * var(--scale-factor)
+    * var(--scale-factor)
+  );
+}
+
+h3, .heading-3 {
+  font-size: calc(
+    var(--base-font-size)
+    * var(--scale-factor)
+  );
+}
+
+h4, .heading-4 {
+}

@@ -1,0 +1,26 @@
+////
+/// Forms
+////
+
+input, textarea, select {
+  display: inline-block;
+  width: 100%;
+  padding: var(--space-quarter);
+  margin-bottom: var(--space);
+  font-size: var(--base-font-size);
+  border: .1rem solid var(--color-subdued);
+  border-radius: .3rem;
+
+  &[required] {
+  }
+}
+
+label {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-subdued);
+}
+
+textarea {
+  min-height: calc(var(--base-font-size) * 8);
+}
