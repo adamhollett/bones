@@ -10,7 +10,7 @@
 
 .column {
   flex: 1;
-  min-width: 200px;
+  min-width: 100px;
 
   &:not(:first-of-type) {
     margin-left: var(--space-half);

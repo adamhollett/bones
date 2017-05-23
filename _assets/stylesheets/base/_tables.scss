@@ -6,12 +6,19 @@ table {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-}
 
-th {
-  border-bottom: .1rem solid var(--color-subdued);
-}
+  th {
+    border-bottom: .1rem solid var(--color-subdued);
+  }
 
-th, td {
-  padding: var(--space-quarter);
+  th, td {
+    padding: var(--space-quarter);
+  }
+
+  &.striped {
+    tr:nth-child(even) {
+      background: var(--color-bg);
+    }
+  }
+
 }

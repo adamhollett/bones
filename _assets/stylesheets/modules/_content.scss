@@ -2,6 +2,7 @@
 /// Content
 ////
 
+article,
 .content {
 
   h1, .heading-1,
@@ -10,12 +11,10 @@
   h4, .heading-4 {
     margin-top: calc(var(--space) * 2);
     margin-bottom: var(--space);
-    font-weight: normal;
-    line-height: calc(var(--base-line-height) * 0.75);
   }
 
-  h1, .heading-1 {
-    margin-bottom: calc(var(--space) * 2);
+  .grid {
+    margin-bottom: var(--space);
   }
 
 }
