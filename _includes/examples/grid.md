@@ -23,7 +23,7 @@ You can add classes to columns to make them take up a bigger or smaller amount o
 `.half.column`
 
 <div class="small center grid">
-  <div class="padded half column" style="background: var(--color-red)">
+  <div class="padded half column" style="background: var(--color-red); color: var(--color-white)">
     class="half column"
   </div>
   {% for i in (1..2) %}
@@ -36,7 +36,7 @@ You can add classes to columns to make them take up a bigger or smaller amount o
 `.third.column`
 
 <div class="small center grid">
-  <div class="padded third column" style="background: var(--color-pink)">
+  <div class="padded third column" style="background: var(--color-pink); color: var(--color-white)">
     class="third column"
   </div>
   {% for i in (1..3) %}
@@ -49,7 +49,7 @@ You can add classes to columns to make them take up a bigger or smaller amount o
 `.quarter.column`
 
 <div class="small center grid">
-  <div class="padded quarter column" style="background: var(--color-purple)">
+  <div class="padded quarter column" style="background: var(--color-purple); color: var(--color-white)">
     class="quarter column"
   </div>
   {% for i in (1..2) %}

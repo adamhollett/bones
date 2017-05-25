@@ -1,6 +1,8 @@
 ---
 ---
 
+{% include _includes/examples/colors.md %}
+
 {% include _includes/examples/typography.md %}
 
 {% include _includes/examples/grid.md %}

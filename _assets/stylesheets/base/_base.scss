@@ -44,6 +44,10 @@ img {
   background: var(--color-bg);
 }
 
+video {
+  max-width: 100%;
+}
+
 blockquote {
   padding-left: var(--space);
   margin-left: 0;
@@ -55,7 +59,7 @@ figure {
   margin: 0;
 }
 
-code {
+code, kbd, samp {
   display: inline-block;
   padding: 0 calc(var(--space) / 5);
   font-size: 0.8em;
