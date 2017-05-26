@@ -2,59 +2,69 @@
 
 Bones comes with a simple grid based on Flexbox. Just put columns in a grid, and they'll expand to fill the available space.
 
-<div class="small center grid">
+<figure class="small center grid">
+  <figcaption>div class="grid"</figcaption>
   {% for i in (1..3) %}
-  <div class="padded column" style="background: var(--color-bg)">
+  <div class="padded column" style="background: var(--color-white)">
     div class="column"
   </div>
   {% endfor %}
-</div>
+</figure>
 
-<div class="small center grid">
+<figure class="small center grid">
+  <figcaption>div class="grid"</figcaption>
   {% for i in (1..4) %}
-  <div class="padded column" style="background: var(--color-bg)">
+  <div class="padded column" style="background: var(--color-white)">
     div class="column"
   </div>
   {% endfor %}
-</div>
+</figure>
+
+### Sized columns
 
 You can add classes to columns to make them take up a bigger or smaller amount of space.
 
-`.half.column`
-
-<div class="small center grid">
+<figure class="small center grid">
+  <figcaption>div class="grid"</figcaption>
   <div class="padded half column" style="background: var(--color-red); color: var(--color-white)">
     class="half column"
   </div>
   {% for i in (1..2) %}
-  <div class="padded column" style="background: var(--color-bg)">
+  <div class="padded column" style="background: var(--color-white)">
     class="column"
   </div>
   {% endfor %}
-</div>
+</figure>
 
-`.third.column`
-
-<div class="small center grid">
+<figure class="small center grid">
+  <figcaption>div class="grid"</figcaption>
   <div class="padded third column" style="background: var(--color-pink); color: var(--color-white)">
     class="third column"
   </div>
-  {% for i in (1..3) %}
-  <div class="padded column" style="background: var(--color-bg)">
+  <div class="padded column" style="background: var(--color-white)">
     class="column"
   </div>
-  {% endfor %}
-</div>
+</figure>
 
-`.quarter.column`
-
-<div class="small center grid">
+<figure class="small center grid">
+  <figcaption>div class="grid"</figcaption>
   <div class="padded quarter column" style="background: var(--color-purple); color: var(--color-white)">
     class="quarter column"
   </div>
-  {% for i in (1..2) %}
-  <div class="padded column" style="background: var(--color-bg)">
+  <div class="padded column" style="background: var(--color-white)">
     class="column"
   </div>
+</figure>
+
+### Flush grids
+
+You can add the `.flush` class to grids to remove the spaces between columns:
+
+<figure class="small center flush grid">
+  <figcaption>div class="flush grid"</figcaption>
+  {% for i in (1..4) %}
+  <div class="padded column" style="background: var(--color-white)">
+    div class="column"
+  </div>
   {% endfor %}
-</div>
+</figure>
