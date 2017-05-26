@@ -6,51 +6,84 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
 
-.column {
-  flex: 1;
-  min-width: 100px;
+  .column {
+    flex: 1;
+    min-width: 100px;
 
-  &:not(:first-of-type) {
-    margin-left: var(--space-half);
-  }
+    &:not(:first-of-type) {
+      margin-left: var(--space-half);
+    }
 
-  &:not(:last-of-type) {
-    margin-right: var(--space-half);
+    &:not(:last-of-type) {
+      margin-right: var(--space-half);
+    }
+
+    ///
+    /// Column widths
+
+    &.padded {
+      padding: var(--space-half);
+    }
+
+    &.half {
+      flex:  none;
+      width: 50%;
+    }
+
+    &.third {
+      flex:  none;
+      width: 33.33%;
+    }
+
+    &.quarter {
+      flex:  none;
+      width: 25%;
+    }
+
+    &.fifth {
+      flex:  none;
+      width: 20%;
+    }
   }
 
   ///
-  /// Column widths
+  /// Flush grid
 
-  &.padded {
-    padding: var(--space-half);
-  }
-
-  &.half {
-    flex:  none;
-    width: 50%;
-  }
-
-  &.third {
-    flex:  none;
-    width: 33.33%;
-  }
-
-  &.quarter {
-    flex:  none;
-    width: 25%;
-  }
-
-  &.fifth {
-    flex:  none;
-    width: 20%;
+  &.flush {
+    .column {
+      margin: 0;
+    }
   }
 }
+
+
 
 ///
 /// Responsiveness
 
 @media (max-width: 720px) {
-  .grid { flex-direction: column; }
+  .grid {
+    flex-direction: column;
+
+    .column {
+
+      // Don't give columns margins on small devices
+      &:not(:first-of-type) {
+        margin-left: 0;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 0;
+      }
+
+      // Sized columns become regular columns
+      &.half,
+      &.third,
+      &.quarter,
+      &.fifth {
+        width: auto;
+      }
+    }
+  }
 }
