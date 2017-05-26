@@ -27,6 +27,7 @@ a {
 
   &:hover:not(.button) {
     color: var(--color-primary);
+    border-bottom: none;
   }
 }
 
