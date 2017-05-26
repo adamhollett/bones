@@ -1,0 +1,20 @@
+////
+/// Figures
+////
+
+figure,
+.figure {
+  padding: var(--space);
+  margin-bottom: var(--space);
+  background: var(--color-bg);
+}
+
+figcaption,
+.caption {
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+
+  &:first-child { margin-bottom: var(--space-half); }
+  &:last-child { margin-top: var(--space-half); }
+}
