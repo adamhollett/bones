@@ -5,6 +5,7 @@
 figure,
 .figure {
   padding: var(--space);
+  margin: 0;
   margin-bottom: var(--space);
   background: var(--color-bg);
 }
@@ -14,6 +15,7 @@ figcaption,
   width: 100%;
   font-size: 1em;
   text-align: center;
+  color: var(--color-subdued);
 
   &:first-child { margin-bottom: var(--space-half); }
   &:last-child { margin-top: var(--space-half); }
