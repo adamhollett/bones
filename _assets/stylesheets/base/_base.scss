@@ -40,9 +40,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  padding: var(--space-half);
-  margin: var(--space) auto;
-  background: var(--color-bg);
 }
 
 video {
@@ -54,10 +51,6 @@ blockquote {
   margin-left: 0;
   color: var(--color-subdued);
   border-left: .3rem solid var(--color-subdued);
-}
-
-figure {
-  margin: 0;
 }
 
 code, kbd, samp {
