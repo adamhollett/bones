@@ -30,8 +30,8 @@ Colors are implemented using native CSS variables, so you can overwrite them or 
       <li><span class="swatch" style="background: var(--color-red)"></span> red, <em>danger</em></li>
       <li><span class="swatch" style="background: var(--color-pink)"></span> pink</li>
       <li><span class="swatch" style="background: var(--color-purple)"></span> purple</li>
-      <li><span class="swatch" style="background: var(--color-indigo)"></span> indigo</li>
-      <li><span class="swatch" style="background: var(--color-blue)"></span> blue, <em>primary</em></li>
+      <li><span class="swatch" style="background: var(--color-indigo)"></span> indigo, <em>primary</em></li>
+      <li><span class="swatch" style="background: var(--color-blue)"></span> blue</li>
       <li><span class="swatch" style="background: var(--color-cyan)"></span> cyan</li>
     </ul>
   </div>
