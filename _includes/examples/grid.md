@@ -1,6 +1,6 @@
 ## Grid
 
-Bones comes with a simple grid based on Flexbox. Just put columns in a grid, and they'll expand to fill the available space.
+Bones comes with a simple grid based on [Flexbox](https://developer.mozilla.org/en/docs/Web/CSS/CSS_Flexible_Box_Layout). Just put columns in a grid, and they'll expand to fill the available space.
 
 <figure class="small center grid">
   <figcaption>div class="grid"</figcaption>
