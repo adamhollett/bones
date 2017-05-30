@@ -3,10 +3,11 @@
 ///
 
 :root {
-  // Type and scale
+  // Font stacks
   --font-sans-serif: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --font-monospace:  Menlo, Monaco, Consolas, monospace;
 
+  // Sizes and scales
   --base-font-size: 1.8rem;
   --base-line-height:  1.6;
   --scale-factor:      1.4;
@@ -14,7 +15,11 @@
   // Spaces
   --space:         calc(var(--base-font-size) * var(--base-line-height));
   --space-half:    calc(var(--space) / 2);
+  --space-third:   calc(var(--space) / 3);
   --space-quarter: calc(var(--space) / 4);
+  --space-double:  calc(var(--space) * 2);
+  --space-triple:  calc(var(--space) * 3);
+  --space-quad:    calc(var(--space) * 4);
 
   // Colors
   --color-white:  rgb(255, 255, 255);
