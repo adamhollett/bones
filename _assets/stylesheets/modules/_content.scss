@@ -5,10 +5,14 @@
 article,
 .content {
 
-  h1, .heading-1,
-  h2, .heading-2,
-  h3, .heading-3,
-  h4, .heading-4 {
+  h1,
+  .heading-1,
+  h2,
+  .heading-2,
+  h3,
+  .heading-3,
+  h4,
+  .heading-4 {
     margin-top: var(--space-double);
     margin-bottom: var(--space);
   }

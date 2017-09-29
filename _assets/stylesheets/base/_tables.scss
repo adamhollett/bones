@@ -8,10 +8,11 @@ table {
   border-collapse: collapse;
 
   th {
-    border-bottom: .1rem solid var(--color-subdued);
+    border-bottom: 0.1rem solid var(--color-subdued);
   }
 
-  th, td {
+  th,
+  td {
     padding: var(--space-quarter);
   }
 

@@ -2,7 +2,8 @@
 /// Buttons
 ////
 
-button, .button {
+button,
+.button {
   display: inline-block;
   padding: calc(var(--space) / 5) var(--space);
   font-size: var(--base-font-size);
@@ -11,17 +12,18 @@ button, .button {
   text-align: center;
   cursor: pointer;
   background: var(--color-subdued);
-  border: .2rem solid rgba(255, 255, 255, 0);
+  border: 0.2rem solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(0, 0, 0, 0.5);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   transition: border var(--transition);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border-color: rgba(255, 255, 255, 0.5);
   }
 
   &:active {
-    transform: translateY(.1rem);
+    transform: translateY(0.1rem);
   }
 
   ///
@@ -34,7 +36,7 @@ button, .button {
   }
 
   // Primary style for "Submit" buttons
-  &[type="submit"] {
+  &[type='submit'] {
     background: var(--color-primary);
   }
 
@@ -46,7 +48,8 @@ button, .button {
     border-color: rgba(0, 0, 0, 0.5);
     color: var(--color-text);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: rgba(0, 0, 0, 0.2);
     }
   }
@@ -64,7 +67,8 @@ button, .button {
       transform: scale(0.5);
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: rgba(0, 0, 0, 0.5);
     }
   }

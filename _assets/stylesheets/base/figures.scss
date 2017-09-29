@@ -17,6 +17,11 @@ figcaption,
   text-align: center;
   color: var(--color-subdued);
 
-  &:first-child { margin-bottom: var(--space-half); }
-  &:last-child { margin-top: var(--space-half); }
+  &:first-child {
+    margin-bottom: var(--space-half);
+  }
+
+  &:last-child {
+    margin-top: var(--space-half);
+  }
 }
