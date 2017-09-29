@@ -14,9 +14,11 @@ article,
   }
 
   img {
-    padding: var(--space-half);
+    padding: var(--space-quarter);
     margin: var(--space) auto;
-    background: var(--color-bg);
+    background: var(--color-white);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 2rem var(--color-subdued);
   }
 
   .grid {
