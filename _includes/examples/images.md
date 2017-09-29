@@ -6,12 +6,12 @@ If they're inside a `.content` container, they'll get spacing and a subtle frame
 
 <div class="grid">
   <div class="column">
-    <img src="https://unsplash.it/800/600/?random">
+    <img src="https://unsplash.it/800/600/?random" width="800" height="600">
   </div>
   <div class="column">
-    <img src="https://unsplash.it/800/600/?random">
+    <img src="https://unsplash.it/800/600/?random" width="800" height="600">
   </div>
   <div class="column">
-    <img src="https://unsplash.it/800/600/?random">
+    <img src="https://unsplash.it/800/600/?random" width="800" height="600">
   </div>
 </div>
