@@ -18,11 +18,10 @@ article,
   }
 
   img {
-    padding: var(--space-quarter);
     margin: var(--space) auto;
-    background: var(--color-white);
+    background: var(--color-bg);
     border-radius: 0.25rem;
-    box-shadow: 0 0.5rem 2rem var(--color-subdued);
+    box-shadow: var(--shadow);
   }
 
   .grid {

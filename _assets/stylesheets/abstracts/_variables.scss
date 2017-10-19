@@ -40,6 +40,10 @@
   --color-yellow: rgb(255, 240,  90);
   --color-orange: rgb(255, 165,  40);  --color-warning: var(--color-orange);
 
+  // Shadows
+  --shadow:       0 .5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-dark:  0 .5rem 2rem rgba(0, 0, 0, 0.25);
+
   // Transitions
   --transition:   0.1s ease;
 }

@@ -1,4 +1,4 @@
-## Utility classes
+## Utilities
 
 Bones includes some helpful utility classes that you can generally add to any element.
 

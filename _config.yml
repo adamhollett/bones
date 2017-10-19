@@ -1,8 +1,9 @@
 ## Metadata
 
-title: Bones
+title:       Bones
 description: Bones is a tiny, semantic CSS framework with just the basics.
-author: Adam Hollett
+author:      Adam Hollett
+url:         https://bones.netlify.com
 
 
 ## Locations
@@ -15,7 +16,7 @@ includes_dir: /
 exclude:
   - Gemfile
   - Gemfile.lock
-  - bones.css
+  - Rakefile
 
 
 ## Assets
@@ -29,6 +30,6 @@ assets:
 
 defaults:
   - scope:
-      path: "" # all files in the project
+      path: '' # all files in the project
     values:
       layout: default
