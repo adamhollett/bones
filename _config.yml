@@ -17,13 +17,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
-
-
-## Assets
-
-assets:
-  caching:
-    type: memory
+sass:
+  sass_dir: _assets/css
 
 
 ## Defaults
