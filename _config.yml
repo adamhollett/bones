@@ -8,7 +8,7 @@ url:         https://bones.netlify.com
 
 ## Locations
 
-includes_dir: /
+includes_dir: .
 
 
 ## Build settings
@@ -22,8 +22,8 @@ exclude:
 ## Assets
 
 assets:
-  cache_type: memory
-  prefix: ''
+  caching:
+    type: memory
 
 
 ## Defaults
