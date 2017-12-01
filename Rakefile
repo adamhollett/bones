@@ -1,10 +1,9 @@
-task :bundle do
-  sh 'bundle --quiet'
-end
+task default: :server
 
-task server: [:bundle, :clean] do
+task server: :clean do
   sh 'bundle exec jekyll liveserve'
 end
+task s: :server
 
 task :clean do
   sh 'bundle exec jekyll clean'
