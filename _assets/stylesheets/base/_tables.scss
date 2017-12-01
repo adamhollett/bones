@@ -8,17 +8,17 @@ table {
   border-collapse: collapse;
 
   th {
-    border-bottom: 0.1rem solid var(--color-subdued);
+    border-bottom: 0.1rem solid $color-subdued;
   }
 
   th,
   td {
-    padding: var(--space-quarter);
+    padding: $space / pow($scale-factor, 3);
   }
 
   &.striped {
     tr:nth-child(even) {
-      background: var(--color-bg);
+      background: $color-bg;
     }
   }
 

@@ -1,0 +1,22 @@
+////
+/// Cards
+////
+
+.card {
+  padding:       var(--space);
+  border:        $border;
+  border-radius: $border-radius;
+  box-shadow:    $shadow-light;
+  transition:    all $transition;
+
+  &.link {
+    border-bottom: 0.5rem solid $color-primary;
+    box-shadow:  $shadow;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-0.5rem);
+      box-shadow: $shadow-dark;
+    }
+  }
+}

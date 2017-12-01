@@ -3,12 +3,12 @@
 ////
 
 html {
-  font-family: var(--font-sans-serif);
+  font-family: $font-sans;
   font-size:   62.5%;
-  line-height: var(--base-line-height);
-  color:       var(--color-text);
+  line-height: $line-height-base;
+  color:       color(coal);
   box-sizing:  border-box;
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -19,33 +19,23 @@ html {
 
 body {
   margin: 0;
-  font-size: var(--base-font-size);
+  font-size: $font-size-base;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 0.2rem solid var(--color-primary);
-  transition: all var(--transition);
+  border-bottom: 0.2rem solid $color-primary;
+  transition: all $transition;
 
   &:hover:not(.button) {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-bg);
+    color: $color-primary;
+    border-bottom-color: $color-bg;
   }
 
   &:active:not(.button) {
-    background: var(--color-bg);
+    background: $color-bg;
   }
-}
-
-p,
-ul,
-ol,
-table,
-blockquote,
-pre {
-  margin-top: 0;
-  margin-bottom: var(--space);
 }
 
 img {
@@ -59,26 +49,26 @@ video {
 }
 
 blockquote {
-  padding-left: var(--space);
+  padding-left: $space;
   margin-left: 0;
-  color: var(--color-subdued);
-  border-left: 0.3rem solid var(--color-subdued);
+  color: $color-subdued;
+  border-left: 0.3rem solid $color-primary;
 }
 
 code,
 kbd,
 samp {
   display: inline-block;
-  padding: 0 calc(var(--space) / 5);
-  font-size: 0.8em;
-  font-family: var(--font-monospace);
-  background: var(--color-bg);
+  padding: 0 ($space / pow($scale-factor, 4));
+  font-size: $font-size-base / $scale-factor;
+  font-family: $font-mono;
+  background: $color-bg;
   border-radius: 0.3rem;
 }
 
 pre {
-  padding: var(--space-half);
-  background: var(--color-bg);
+  padding: $space / pow($scale-factor, 2);
+  background: $color-bg;
 
   code {
     background: none;
@@ -86,11 +76,11 @@ pre {
 }
 
 hr {
-  margin-top: var(--space);
-  margin-bottom: var(--space);
-  border: 0.1rem solid var(--color-bg);
+  margin-top: $space;
+  margin-bottom: $space;
+  border: 0.1rem solid $color-bg;
 }
 
 :focus {
-  outline: var(--color-primary) auto .4rem;
+  outline: $color-primary auto 0.4rem;
 }

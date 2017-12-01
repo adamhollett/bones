@@ -2,6 +2,75 @@
 //  Variables
 ///
 
+///
+/// Spaces and sizes
+
+$font-size-base:   1.8rem;
+$line-height-base:   1.65;
+$scale-factor:        1.4;
+
+$space: $font-size-base * $line-height-base;
+
+///
+/// Colors
+
+$colors: (
+  white:  rgb(255, 255, 255),
+  chalk:  rgb(230, 230, 230),
+  ash:    rgb(200, 200, 200),
+  smoke:  rgb(150, 150, 150),
+  grey:   rgb(100, 100, 100),
+  coal:   rgb( 50,  50,  50),
+  black:  rgb(  0,   0,   0),
+  brown:  rgb(140, 110, 100),
+  red:    rgb(240,  85,  80),
+  pink:   rgb(235,  65, 120),
+  purple: rgb(170,  70, 190),
+  indigo: rgb( 90, 105, 190),
+  blue:   rgb( 65, 165, 245),
+  cyan:   rgb( 40, 200, 220),
+  teal:   rgb( 40, 165, 155),
+  green:  rgb(100, 185, 105),
+  lime:   rgb(210, 225,  85),
+  yellow: rgb(255, 240,  90),
+  orange: rgb(255, 165,  40),
+);
+
+$color-primary: color(indigo);
+$color-bg:      lighten(color(chalk), 5);
+$color-subdued: color(grey);
+
+$color-success: color(green);
+$color-warning: color(orange);
+$color-danger:  color(red);
+
+///
+/// Fonts
+
+$font-sans: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+$font-mono: Menlo, Monaco, Consolas, monospace;
+
+///
+/// Borders
+
+$border: 1px solid color(chalk);
+$border-radius: 0.5rem;
+
+///
+/// Shadows
+
+$box-shadow:      0 0.25rem 1.5rem color(ash);
+$box-shadow-dark: 0 0.3rem 1.8rem color(smoke);
+
+$shadow:       0 5px 15px rgba(0, 0, 0, 0.15);
+$shadow-light: 0 2px 15px rgba(0, 0, 0, 0.10);
+$shadow-dark:  0 5px 25px rgba(0, 0, 0, 0.25);
+
+///
+/// Transitions
+
+$transition: 0.15s ease;
+
 :root {
   // Font stacks
   --font-sans-serif: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica, Arial, sans-serif;

@@ -1,0 +1,52 @@
+////
+/// Articles
+////
+
+article,
+.article {
+
+  > {
+    p,
+    ul,
+    ol,
+    table,
+    blockquote,
+    pre,
+    .grid {
+      margin-top: 0;
+      margin-bottom: $space;
+    }
+
+    h1,
+    .heading-1 {
+      margin-top:    $space * pow($scale-factor, 3);
+      margin-bottom: $space * $scale-factor;
+    }
+
+    h2,
+    .heading-2 {
+      margin-top:    $space * pow($scale-factor, 2);
+      margin-bottom: $space;
+    }
+
+    h3,
+    .heading-3 {
+      margin-top:    $space * $scale-factor;
+      margin-bottom: $space / $scale-factor;
+    }
+
+    h4,
+    .heading-4 {
+      margin-top:    $space;
+      margin-bottom: $space / pow($scale-factor, 2);
+    }
+  }
+
+  img {
+    margin: var(--space) auto;
+    background: var(--color-bg);
+    border-radius: 0.25rem;
+    box-shadow: var(--shadow);
+  }
+
+}

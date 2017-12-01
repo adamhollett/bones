@@ -5,28 +5,28 @@
 button,
 .button {
   display: inline-block;
-  padding: calc(var(--space) / 5) var(--space);
-  font-size: var(--base-font-size);
+  padding: ($space / pow($scale-factor, 5)) $space;
+  font-size: $font-size-base;
   line-height: inherit;
-  color: var(--color-white);
+  color: color(white);
   text-align: center;
   cursor: pointer;
-  background: var(--color-subdued);
+  background: desaturate($color-primary, 50);
   border: 0.2rem solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.4rem;
-  box-shadow: var(--shadow);
-  transition: all var(--transition);
+  box-shadow: $box-shadow;
+  transition: all $transition;
 
   &:hover,
   &:focus {
     opacity: 0.9;
-    box-shadow: var(--shadow-dark);
+    box-shadow: $box-shadow-dark;
   }
 
   &:active {
     position: relative;
-    top: .2rem;
+    top: 0.2rem;
     border-bottom-width: 0;
   }
 

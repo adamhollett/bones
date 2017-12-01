@@ -12,18 +12,18 @@
     min-width: 100px;
 
     &:not(:first-of-type) {
-      margin-left: var(--space-half);
+      margin-left: $space / 2;
     }
 
     &:not(:last-of-type) {
-      margin-right: var(--space-half);
+      margin-right: $space / 2;
     }
 
     ///
     /// Column widths
 
     &.padded {
-      padding: var(--space-half);
+      padding: $space / pow($scale-factor, 2);
     }
 
     &.half {

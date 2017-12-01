@@ -1,3 +1,4 @@
+@import 'abstracts/functions';
 @import 'abstracts/variables';
 
 @import 'base/base';
@@ -11,7 +12,8 @@
 @import 'layout/grid';
 @import 'layout/container';
 
-@import 'modules/content';
+@import 'modules/articles';
+@import 'modules/cards';
 
 .center {
   text-align: center;

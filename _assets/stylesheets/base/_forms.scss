@@ -7,19 +7,20 @@ textarea,
 select {
   display: inline-block;
   width: 100%;
-  padding: var(--space-quarter);
-  margin-bottom: var(--space);
-  font-size: var(--base-font-size);
-  border: 0.1rem solid var(--color-subdued);
+  padding: $space / pow($scale-factor, 4);
+  margin-bottom: $space;
+  font-size: $font-size-base;
+  border: $border;
   border-radius: 0.3rem;
+  height: $space * $scale-factor;
 }
 
 label {
   font-size: 1.6rem;
   text-transform: uppercase;
-  color: var(--color-subdued);
+  color: $color-subdued;
 }
 
 textarea {
-  min-height: calc(var(--base-font-size) * 8);
+  min-height: $font-size-base * 8;
 }

@@ -4,7 +4,7 @@
 
 ul,
 ol {
-  padding-left: var(--space);
+  padding-left: $space;
 
   // Remove space around nested lists
   ul,

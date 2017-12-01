@@ -4,25 +4,24 @@
 
 figure,
 .figure {
-  padding: var(--space);
+  padding: $space;
   margin: 0;
-  margin-bottom: var(--space);
-  background: var(--color-bg);
+  margin-bottom: $space;
+  background: $color-bg;
   border-radius: 0.25rem;
 }
 
 figcaption,
 .caption {
   width: 100%;
-  font-size: 1em;
   text-align: center;
-  color: var(--color-subdued);
+  color: $space;
 
   &:first-child {
-    margin-bottom: var(--space-half);
+    margin-bottom: $space / $scale-factor;
   }
 
   &:last-child {
-    margin-top: var(--space-half);
+    margin-top: $space / $scale-factor;
   }
 }

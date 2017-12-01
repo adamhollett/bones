@@ -11,32 +11,25 @@ h3,
 h4,
 .heading-4 {
   font-weight: normal;
-  line-height: calc(var(--base-line-height) * 0.75);
+  line-height: $line-height-base / $scale-factor;
 }
 
 h1,
 .heading-1 {
-  font-size: calc(
-    var(--base-font-size)
-    * var(--scale-factor)
-    * var(--scale-factor)
-    * var(--scale-factor)
-  );
+  font-size: $font-size-base * pow($scale-factor, 3);
 }
 
 h2,
 .heading-2 {
-  font-size: calc(
-    var(--base-font-size)
-    * var(--scale-factor)
-    * var(--scale-factor)
-  );
+  font-size: $font-size-base * pow($scale-factor, 2);
 }
 
 h3,
 .heading-3 {
-  font-size: calc(
-    var(--base-font-size)
-    * var(--scale-factor)
-  );
+  font-size: $font-size-base * pow($scale-factor, 1);
+}
+
+h4,
+.heading-4 {
+  font-size: $font-size-base;
 }

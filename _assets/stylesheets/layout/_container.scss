@@ -3,8 +3,8 @@
 ////
 
 .container {
-  max-width: calc(var(--base-font-size) * 50);
-  min-width: calc(var(--base-font-size) * 20);
-  padding: var(--space);
+  max-width: $font-size-base * 50;
+  min-width: $font-size-base * 20;
+  padding: $space;
   margin: 0 auto;
 }
