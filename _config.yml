@@ -1,7 +1,7 @@
 ## Metadata
 
 title:       Bones
-description: Bones is a tiny, semantic CSS framework with just the basics.
+description: Bones is a tiny CSS starting point with just the basics.
 author:      Adam Hollett
 url:         https://bones.netlify.com
 
@@ -17,6 +17,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+  - readme.md
 sass:
   sass_dir: _assets/css
 

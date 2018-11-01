@@ -1,0 +1,46 @@
+////
+/// Typography
+////
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0;
+  margin-bottom: var(--space);
+}
+
+h1 {
+  margin-top: var(--space);
+  margin-bottom: calc(var(--space) * 2);
+  font-size: calc(
+    var(--font-size-base) *
+    var(--scale-factor) *
+    var(--scale-factor) *
+    var(--scale-factor)
+  );
+  line-height: 1.4;
+}
+
+h2 {
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+  font-size: calc(
+    var(--font-size-base) *
+    var(--scale-factor) *
+    var(--scale-factor)
+  );
+}
+
+h3 {
+  margin-top: var(--space);
+  margin-bottom: 0;
+  font-size: calc(
+    var(--font-size-base) *
+    var(--scale-factor)
+  );
+  line-height: 1.25;
+}
+
+h4 {
+  margin-top: var(--space);
+  margin-bottom: 0;
+  font-size: var(--font-size-base);
+}

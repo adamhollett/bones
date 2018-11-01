@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="bones.css">
     <link rel="icon" href="https://png.icons8.com/skeleton">
-    <link rel="canonical" href="{{ page.url | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
 
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}">
@@ -34,26 +34,11 @@
 
   <body>
     <main>
-      <div class="center">
-        <h1>{{ site.title }}</h1>
-
-        <p>{{ site.description }}</p>
-
-        <a class="primary button" href="bones.css">CSS</a>
-        <a class="button" href="https://github.com/admhlt/bones">GitHub</a>
-      </div>
-
-      <hr>
-
-      <article class="container">
+      <article>
         {{ content }}
       </article>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
   </body>
-
-  <footer class="center small">
-    Made with <span style="color: var(--color-danger)">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
-  </footer>
 </html>

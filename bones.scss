@@ -1,31 +1,6 @@
 ---
 ---
 
-@import 'abstracts/functions';
-@import 'abstracts/variables';
-
-@import 'base/base';
-@import 'base/typography';
-@import 'base/lists';
-@import 'base/tables';
-@import 'base/forms';
-@import 'base/buttons';
-@import 'base/figures';
-
-@import 'layout/grid';
-@import 'layout/container';
-
-@import 'modules/articles';
-@import 'modules/cards';
-
-.center {
-  text-align: center;
-}
-
-.small {
-  font-size: 0.8em;
-}
-
-.large {
-  font-size: 1.2em;
-}
+@import 'variables';
+@import 'base';
+@import 'typography';
