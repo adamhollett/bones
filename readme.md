@@ -4,10 +4,10 @@
 
 What you get:
 
-- some CSS variables for scaling and spacing, and default font stacks
+- CSS variables for scaling, spacing, and default font stacks
 - a modular typography grid
 
-... and that's all!
+...and that's all!
 
 <footer>
   Made with ♥ by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.

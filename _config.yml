@@ -9,17 +9,21 @@ url:         https://bones.netlify.com
 ## Locations
 
 includes_dir: .
+layouts_dir: .
 
 
 ## Build settings
+
+incremental: true
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
   - readme.md
-sass:
-  sass_dir: _assets/css
+
+liquid:
+  error_mode: strict
 
 
 ## Defaults
@@ -28,4 +32,4 @@ defaults:
   - scope:
       path: '' # all files in the project
     values:
-      layout: default
+      layout: layout
