@@ -1,6 +1,4 @@
-/*//
-//  Variables
-//*/
+/* Variables */
 
 :root {
   /* from https://www.gridlover.net */
@@ -20,9 +18,7 @@
 }
 
 
-/*//
-/// Base
-//*/
+/* Base */
 
 html {
   font-family: var(--font-sans);
@@ -50,9 +46,7 @@ img, video {
 }
 
 
-/*//
-/// Typography
-//*/
+/* Typography */
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
