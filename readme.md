@@ -9,6 +9,7 @@ What you get:
 - CSS variables for scaling, spacing, and default font stacks
 - responsive images and videos that won't outscale their containers
 - a modular typography grid
+- a basic flexbox grid system
 
 ...and that's all!
 
