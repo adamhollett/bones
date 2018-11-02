@@ -1,7 +1,7 @@
 task default: :server
 
 task server: :clean do
-  sh 'bundle exec jekyll liveserve'
+  sh 'bundle exec jekyll serve --livereload'
 end
 task s: :server
 
