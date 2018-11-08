@@ -14,5 +14,5 @@ What you get:
 ...and that's all!
 
 <footer>
-  Made with ♥ by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
+  Made with <span style="color: rgb(230, 55, 55);">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
 </footer>

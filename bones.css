@@ -40,11 +40,14 @@ img, video {
 
 /* Typography */
 
-a { color: rgb(30, 135, 230); }
+a, a:visited, a:active {
+  color: inherit;
+  text-decoration-color: rgb(30, 135, 230);
+}
 
-a:visited { color: rgb(140, 35, 170); }
-
-a:active { color: rgb(230, 55, 55); }
+a:active {
+  color: rgb(30, 135, 230);
+}
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
