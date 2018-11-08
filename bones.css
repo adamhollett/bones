@@ -11,11 +11,10 @@
 
   /* from https://bitsofco.de/the-new-system-font-stack */
   --font-sans: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  --font-serif: 'Palatino Linotype', Palatino, Palladio, 'Book Antiqua', Baskerville, 'Bookman Old Style', Garamond, 'Apple Garamond', 'New Century Schoolbook', 'Century Schoolbook', Georgia, serif;
+  --font-serif: 'Palatino Linotype', Palatino, Palladio, 'Book Antiqua', Baskerville, 'Bookman Old Style', Garamond, 'Apple Garamond', Georgia, serif;
   --font-mono: Consolas, 'Lucida Console', Menlo, Monaco, Cousine, 'Courier New', Courier, monospace;
 
-  --transition: 0.15s ease;
-}
+  --transition: 0.15s ease; }
 
 
 /* Base */
@@ -24,34 +23,32 @@ html {
   font-family: var(--font-sans);
   font-size:   62.5%;
   line-height: var(--line-height-base);
-  color:       rgb(32, 50, 64);
-  box-sizing:  border-box;
-}
+  color:       rgb(25, 40, 50);
+  box-sizing:  border-box; }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
   margin: 0 auto;
   max-width: var(--page-width);
-  font-size: var(--font-size-base);
-}
+  font-size: var(--font-size-base); }
 
 img, video {
   max-width: 100%;
-  height: auto;
-}
+  height: auto; }
 
 
 /* Typography */
 
+a { color: rgb(30, 135, 230); }
+
+a:visited { color: rgb(140, 35, 170); }
+
+a:active { color: rgb(230, 55, 55); }
+
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;
-  margin-bottom: var(--space);
-}
+  margin-bottom: var(--space); }
 
 h1 {
   margin-top: var(--space);
@@ -62,8 +59,7 @@ h1 {
     var(--scale-factor) *
     var(--scale-factor)
   );
-  line-height: 1.4;
-}
+  line-height: 1.4; }
 
 h2 {
   margin-top: var(--space);
@@ -72,8 +68,7 @@ h2 {
     var(--font-size-base) *
     var(--scale-factor) *
     var(--scale-factor)
-  );
-}
+  ); }
 
 h3 {
   margin-top: var(--space);
@@ -82,14 +77,12 @@ h3 {
     var(--font-size-base) *
     var(--scale-factor)
   );
-  line-height: 1.25;
-}
+  line-height: 1.25; }
 
 h4 {
   margin-top: var(--space);
   margin-bottom: 0;
-  font-size: var(--font-size-base);
-}
+  font-size: var(--font-size-base); }
 
 
 /* Grid */
@@ -98,11 +91,9 @@ h4 {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(var(--space) / 2 * -1);
-}
+  margin: calc(var(--space) / 2 * -1); }
 
 .grid .column {
   flex: 1;
   min-width: calc(var(--space) * 6);
-  margin: calc(var(--space) / 2);
-}
+  margin: calc(var(--space) / 2); }
