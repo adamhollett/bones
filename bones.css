@@ -12,9 +12,7 @@
   /* from https://bitsofco.de/the-new-system-font-stack */
   --font-sans: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --font-serif: 'Palatino Linotype', Palatino, Palladio, 'Book Antiqua', Baskerville, 'Bookman Old Style', Garamond, 'Apple Garamond', Georgia, serif;
-  --font-mono: Consolas, 'Lucida Console', Menlo, Monaco, Cousine, 'Courier New', Courier, monospace;
-
-  --transition: 0.15s ease; }
+  --font-mono: Consolas, 'Lucida Console', Menlo, Monaco, Cousine, 'Courier New', Courier, monospace; }
 
 
 /* Base */
@@ -45,6 +43,11 @@ a, a:visited, a:active {
   text-decoration-color: rgb(30, 135, 230);
 }
 
+a:hover {
+  color: rgb(30, 135, 230);
+  transition: all 0.1s ease;
+}
+
 a:active {
   color: rgb(30, 135, 230);
 }
@@ -56,30 +59,18 @@ p, ul, ol, pre, table, blockquote {
 h1 {
   margin-top: var(--space);
   margin-bottom: calc(var(--space) * 2);
-  font-size: calc(
-    var(--font-size-base) *
-    var(--scale-factor) *
-    var(--scale-factor) *
-    var(--scale-factor)
-  );
+  font-size: calc(var(--font-size-base) * var(--scale-factor) * var(--scale-factor) * var(--scale-factor));
   line-height: 1.4; }
 
 h2 {
   margin-top: var(--space);
   margin-bottom: var(--space);
-  font-size: calc(
-    var(--font-size-base) *
-    var(--scale-factor) *
-    var(--scale-factor)
-  ); }
+  font-size: calc(var(--font-size-base) * var(--scale-factor) * var(--scale-factor)); }
 
 h3 {
   margin-top: var(--space);
   margin-bottom: 0;
-  font-size: calc(
-    var(--font-size-base) *
-    var(--scale-factor)
-  );
+  font-size: calc(var(--font-size-base) * var(--scale-factor));
   line-height: 1.25; }
 
 h4 {
