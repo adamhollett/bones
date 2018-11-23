@@ -6,32 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ site.title }}</title>
+    {%- assign meta_title = page.title | default: site.title %}
+    {%- assign meta_description = page.description | default: site.description %}
+    {%- assign meta_canonical_url = page.url | absolute_url %}
+    {%- assign meta_image = 'https://png.icons8.com/skeleton/500' %}
+    {%- capture bones_css %}{% include bones.css %}{% endcapture %}
 
-    <meta name="description" content="{{ site.description }}">
+    <title>{{ meta_title }}</title>
+
+    <meta name="description" content="{{ meta_description }}">
     <meta name="author" content="{{ site.author }}">
     <meta name="robots" content="index, follow">
     <meta name="mobile-web-app-capable" content="yes">
 
     <style>
-      {% include bones.css %}
+      {{ bones_css | normalize_whitespace }}
     </style>
     <link rel="icon" href="https://png.icons8.com/skeleton">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="canonical" href="{{ meta_canonical_url }}">
 
     <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:title" content="{{ page.title | default: site.title }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:url" content="{{ meta_canonical_url }}">
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://png.icons8.com/skeleton">
+    <meta property="og:image" content="{{ meta_image }}">
 
     <meta name="twitter:site" content="{{ site.title }}">
-    <meta name="twitter:url" content="{{ site.url }}">
-    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:url" content="{{ meta_canonical_url }}">
+    <meta name="twitter:title" content="{{ meta_title }}">
+    <meta name="twitter:description" content="{{ meta_description }}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="https://png.icons8.com/skeleton">
+    <meta name="twitter:image" content="{{ meta_image }}">
   </head>
 
   <body>
