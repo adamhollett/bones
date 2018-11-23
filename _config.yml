@@ -14,8 +14,6 @@ layouts_dir: .
 
 ## Build settings
 
-incremental: true
-
 exclude:
   - Gemfile
   - Gemfile.lock

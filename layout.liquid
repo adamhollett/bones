@@ -13,7 +13,9 @@
     <meta name="robots" content="index, follow">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" href="/bones.css">
+    <style>
+      {% include bones.css %}
+    </style>
     <link rel="icon" href="https://png.icons8.com/skeleton">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 
@@ -38,7 +40,8 @@
         {{ content }}
       </article>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <footer>
+      Made with <span style="color: rgb(230, 55, 55);">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
+    </footer>
   </body>
 </html>

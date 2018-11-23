@@ -1,6 +1,6 @@
 # Bones
 
-[See the CSS](bones.css)
+[CSS](bones.css) · [Github](https://github.com/adamhollett/bones)
 
 **Bones** is a tiny bit of CSS that you can add as a starting point for all your projects. It includes only the things that you'll probably want on every site.
 
@@ -12,7 +12,3 @@ What you get:
 - a basic flexbox grid system
 
 ...and that's all!
-
-<footer>
-  Made with <span style="color: rgb(230, 55, 55);">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
-</footer>
