@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 3.6'
-gem 'rake'
+gem 'rake', group: :development
 
 if Gem.win_platform?
   gem 'tzinfo-data'
