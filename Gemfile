@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.6'
+gem 'jekyll', '~> 4.3'
 gem 'rake', group: :development
 
 if Gem.win_platform?

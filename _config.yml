@@ -1,18 +1,10 @@
-## Metadata
-
 title:       Bones
 description: Bones is a tiny CSS starting point with just the basics.
 author:      Adam Hollett
 url:         https://bones.netlify.com
 
-
-## Locations
-
 includes_dir: .
 layouts_dir: .
-
-
-## Build settings
 
 exclude:
   - Gemfile
@@ -22,9 +14,6 @@ exclude:
 
 liquid:
   error_mode: strict
-
-
-## Defaults
 
 defaults:
   - scope:
