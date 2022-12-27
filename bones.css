@@ -3,7 +3,7 @@
 :root {
   /* from https://www.gridlover.net */
   --font-size: 2rem;
-  --line-height: 1.61;
+  --line-height: 1.6;
   --scale-factor: 1.33;
 
   --space: calc(var(--font-size) * var(--line-height));
@@ -80,17 +80,3 @@ h4 {
   margin-top: var(--space);
   margin-bottom: 0;
   font-size: var(--font-size); }
-
-
-/* Grid */
-/* from http://admh.lt/posts/2018/06/responsive-flexbox-grid */
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--space) / 2 * -1); }
-
-.grid .column {
-  flex: 1;
-  min-width: calc(var(--space) * 6);
-  margin: calc(var(--space) / 2); }
