@@ -7,7 +7,7 @@
 What you get:
 
 - CSS variables for spacing, scaling, and default font stacks
-- responsive images and videos that won't outscale their containers
 - a modular typographic grid
+- responsive images and videos that won't outscale their containers
 
 ...and that's all!

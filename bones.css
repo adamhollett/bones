@@ -1,82 +1,110 @@
 /* Variables */
 
 :root {
-  /* from https://www.gridlover.net */
-  --font-size: 2rem;
-  --line-height: 1.6;
+  /* from https://24ways.org/2006/compose-to-a-vertical-rhythm */
+  --base-font-size: 2rem;
+  --base-line-height: 1.6;
   --scale-factor: 1.33;
 
-  --space: calc(var(--font-size) * var(--line-height));
-  --page-width: calc(var(--space) * 32);
+  --space: calc(var(--base-font-size) * var(--base-line-height));
 
   /* from https://bitsofco.de/the-new-system-font-stack */
-  --font-sans: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  --font-serif: 'Palatino Linotype', Palatino, 'Book Antiqua', Baskerville, 'Bookman Old Style', Garamond, Georgia, serif;
-  --font-mono: Consolas, 'Lucida Console', Menlo, Monaco, Cousine, 'Courier New', Courier, monospace;
+  --fonts-sans: system-ui, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  --fonts-serif: "Palatino Linotype", "Palatino", "Book Antiqua", "Baskerville", "Bookman Old Style", "Garamond", "Georgia", serif;
+  --fonts-mono: "Consolas", "Lucida Console", "Menlo", "Monaco", "Cousine", "Courier New", "Courier", monospace;
 
-  --color-link: rgb(30, 135, 230);
+  --color-text:   hsl(180, 25%, 25%);
+  --color-link:   hsl(225, 75%, 60%);
+  --color-subtle: hsl(180, 25%, 90%);
 }
-
 
 /* Base */
 
 html {
-  font-family: var(--font-sans);
+  font-family: var(--fonts-sans);
   font-size:   62.5%;
-  line-height: var(--line-height);
-  color:       rgb(45, 60, 70);
-  box-sizing:  border-box; }
+  line-height: var(--base-line-height);
+  color:       var(--color-text);
+  box-sizing:  border-box;
+}
 
-*, *:before, *:after { box-sizing: inherit; }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
   margin: var(--space);
-  max-width: var(--page-width);
-  font-size: var(--font-size); }
+  font-size: var(--base-font-size);
+}
+
+main {
+  max-width: calc(var(--space) * 32);
+}
 
 img, video {
-  max-width: 100%; }
-
+  max-width: 100%;
+}
 
 /* Typography */
 
 a {
   color: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid var(--color-link);
+  text-decoration-color: var(--color-link);
+  text-underline-offset: 0.25rem;
+  transition: color 0.2s ease;
+
+  &:hover, &:active {
+    color: var(--color-link);
+  }
 }
 
-a:hover {
-  color: var(--color-link);
-  transition: all 0.1s ease;
+p, ul, ol, pre, table {
+  margin-block-start: 0;
+  margin-block-end: var(--space);
 }
 
-a:active {
-  color: var(--color-link);
+code {
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+  font-size: 0.9em;
+  background-color: var(--color-subtle);
 }
 
-p, ul, ol, pre, table, blockquote {
-  margin-top: 0;
-  margin-bottom: var(--space); }
+blockquote {
+  margin-block: 0 var(--space);
+  margin-inline: unset;
+  padding-inline-start: calc(var(--space) - 0.5rem);
+  border-left: 0.5rem solid var(--color-subtle);
+}
 
-h1, h2, h3, h4 { line-height: calc(var(--line-height) * 0.85); }
+h1, h2, h3, h4 {
+  line-height: calc(var(--base-line-height) * 0.85);
+}
 
 h1 {
-  margin-top: var(--space);
-  margin-bottom: calc(var(--space) * 2);
-  font-size: calc(var(--font-size) * var(--scale-factor) * var(--scale-factor) * var(--scale-factor)); }
+  margin-block: calc(var(--space) * 2);
+  font-size: calc(var(--base-font-size) * pow(var(--scale-factor), 3));
+}
 
 h2 {
-  margin-top: var(--space);
-  margin-bottom: var(--space);
-  font-size: calc(var(--font-size) * var(--scale-factor) * var(--scale-factor)); }
+  margin-block-start: calc(var(--space) * 2);
+  margin-block-end: var(--space);
+  font-size: calc(var(--base-font-size) * pow(var(--scale-factor), 2));
+}
 
 h3 {
-  margin-top: var(--space);
-  margin-bottom: 0;
-  font-size: calc(var(--font-size) * var(--scale-factor)); }
+  margin-block-start: var(--space);
+  margin-block-end: 0;
+  font-size: calc(var(--base-font-size) * var(--scale-factor));
+}
 
 h4 {
-  margin-top: var(--space);
-  margin-bottom: 0;
-  font-size: var(--font-size); }
+  margin-block-start: var(--space);
+  margin-block-end: 0;
+  font-size: var(--base-font-size);
+}
+
+hr {
+  margin-block: calc(var(--space) * 4);
+  border: 0.2rem solid var(--color-subtle);
+}
