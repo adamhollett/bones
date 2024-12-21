@@ -17,6 +17,6 @@ liquid:
 
 defaults:
   - scope:
-      path: '' # all files in the project
+      path: "" # all files in the project
     values:
       layout: layout

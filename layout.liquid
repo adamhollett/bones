@@ -9,7 +9,6 @@
     {%- assign meta_title = page.title | default: site.title %}
     {%- assign meta_description = page.description | default: site.description %}
     {%- assign meta_canonical_url = page.url | absolute_url %}
-    {%- assign meta_image = 'https://png.icons8.com/skeleton/500' %}
     {%- capture bones_css %}{% include bones.css %}{% endcapture %}
 
     <title>{{ meta_title }}</title>
@@ -22,7 +21,7 @@
     <style>
       {{ bones_css | normalize_whitespace }}
     </style>
-    <link rel="icon" href="https://png.icons8.com/skeleton">
+
     <link rel="canonical" href="{{ meta_canonical_url }}">
 
     <meta property="og:site_name" content="{{ site.title }}">
@@ -30,14 +29,12 @@
     <meta property="og:title" content="{{ meta_title }}">
     <meta property="og:description" content="{{ meta_description }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ meta_image }}">
 
     <meta name="twitter:site" content="{{ site.title }}">
     <meta name="twitter:url" content="{{ meta_canonical_url }}">
     <meta name="twitter:title" content="{{ meta_title }}">
     <meta name="twitter:description" content="{{ meta_description }}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="{{ meta_image }}">
   </head>
 
   <body>
@@ -46,8 +43,9 @@
         {{ content }}
       </article>
     </main>
+
     <footer>
-      Made with <span style="color: rgb(230, 55, 55);">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>. Icons from <a href="https://icons8.com">Icons8</a>.
+      Made with <span style="color: hsl(350, 80%, 50%);">♥</span> by <a href="https://adamhollett.com">Adam Hollett</a>.
     </footer>
   </body>
 </html>
