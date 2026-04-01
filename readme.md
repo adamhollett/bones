@@ -6,8 +6,8 @@
 
 What you get:
 
-- CSS variables for spacing, scaling, and default font stacks
-- a modular typographic grid
+- CSS variables for font sizing, spacing, and scaling
+- default font stacks for serif, sans-serif, and monospace text
 - responsive images and videos that won't outscale their containers
 
 ...and that's all!

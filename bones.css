@@ -1,110 +1,114 @@
-/* Variables */
-
-:root {
-  /* from https://24ways.org/2006/compose-to-a-vertical-rhythm */
-  --base-font-size: 2rem;
-  --base-line-height: 1.6;
-  --scale-factor: 1.33;
-
-  --space: calc(var(--base-font-size) * var(--base-line-height));
-
-  /* from https://bitsofco.de/the-new-system-font-stack */
-  --fonts-sans: system-ui, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
-  --fonts-serif: "Palatino Linotype", "Palatino", "Book Antiqua", "Baskerville", "Bookman Old Style", "Garamond", "Georgia", serif;
-  --fonts-mono: "Consolas", "Lucida Console", "Menlo", "Monaco", "Cousine", "Courier New", "Courier", monospace;
-
-  --color-text:   hsl(180, 25%, 25%);
-  --color-link:   hsl(225, 75%, 60%);
-  --color-subtle: hsl(180, 25%, 90%);
-}
-
-/* Base */
-
-html {
-  font-family: var(--fonts-sans);
-  font-size:   62.5%;
-  line-height: var(--base-line-height);
-  color:       var(--color-text);
-  box-sizing:  border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: var(--space);
-  font-size: var(--base-font-size);
-}
-
-main {
-  max-width: calc(var(--space) * 32);
-}
-
-img, video {
-  max-width: 100%;
-}
-
-/* Typography */
-
-a {
-  color: inherit;
-  text-decoration-color: var(--color-link);
-  text-underline-offset: 0.25rem;
-  transition: color 0.2s ease;
-
-  &:hover, &:active {
-    color: var(--color-link);
+@layer reset {
+  *, *:before, *:after {
+    box-sizing: border-box;
   }
-}
 
-p, ul, ol, pre, table {
-  margin-block-start: 0;
-  margin-block-end: var(--space);
-}
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-code {
-  padding: 0.3rem;
-  border-radius: 0.6rem;
-  font-size: 0.9em;
-  background-color: var(--color-subtle);
-}
+  :root {
+    interpolate-size: allow-keywords;
 
-blockquote {
-  margin-block: 0 var(--space);
-  margin-inline: unset;
-  padding-inline-start: calc(var(--space) - 0.5rem);
-  border-left: 0.5rem solid var(--color-subtle);
-}
+    --base-font-size: 1.25rem;
+    --base-line-height: 1.5;
+    --scale-factor: 1.4;
 
-h1, h2, h3, h4 {
-  line-height: calc(var(--base-line-height) * 0.85);
-}
+    --space: calc(var(--base-font-size) * var(--base-line-height));
 
-h1 {
-  margin-block: calc(var(--space) * 2);
-  font-size: calc(var(--base-font-size) * pow(var(--scale-factor), 3));
-}
+    /* from https://bitsofco.de/the-new-system-font-stack */
+    --fonts-sans: system-ui, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+    --fonts-serif: "Palatino Linotype", "Palatino", "Book Antiqua", "Baskerville", "Bookman Old Style", "Garamond", "Georgia", serif;
+    --fonts-mono: "Consolas", "Lucida Console", "Menlo", "Monaco", "Cousine", "Courier New", "Courier", monospace;
+  }
 
-h2 {
-  margin-block-start: calc(var(--space) * 2);
-  margin-block-end: var(--space);
-  font-size: calc(var(--base-font-size) * pow(var(--scale-factor), 2));
-}
+  body {
+    margin: calc(var(--space) * 3);
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    font-family: var(--fonts-sans);
+    color: var(--color-slate-1);
+  }
 
-h3 {
-  margin-block-start: var(--space);
-  margin-block-end: 0;
-  font-size: calc(var(--base-font-size) * var(--scale-factor));
-}
+  /* Media */
+  :where(img, picture, video, canvas, svg) {
+    display: block;
+    max-inline-size: 100%;
+  }
 
-h4 {
-  margin-block-start: var(--space);
-  margin-block-end: 0;
-  font-size: var(--base-font-size);
-}
+  /* Forms */
+  :where(input, button, textarea, select) {
+    font: inherit;
+    word-spacing: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+  }
 
-hr {
-  margin-block: calc(var(--space) * 4);
-  border: 0.2rem solid var(--color-subtle);
+  a {
+    color: inherit;
+    text-decoration-color: royalblue;
+    text-underline-offset: 0.25rem;
+    transition: all 0.15s ease;
+
+    &:hover, &:active {
+      color: royalblue;
+      text-decoration-color: whitesmoke;
+    }
+  }
+
+  p, ul, ol, pre, table {
+    margin-block: 1em;
+  }
+
+  ul, ol {
+    padding-inline-start: 1em;
+  }
+
+  h1, h2, h3, h4 {
+    margin-trim: block;
+    line-height: 1.25em;
+    font-weight: 500;
+    letter-spacing: -0.025ch;
+    text-wrap: balance;
+  }
+
+  h1 {
+    margin-block: 1.5em;
+    font-size: calc(var(--base-font-size) * pow(var(--scale-factor), 3));
+  }
+
+  h2 {
+    margin-block-start: 1.5em;
+    margin-block-end: 1em;
+    font-size: calc(var(--base-font-size) * pow(var(--scale-factor), 2));
+  }
+
+  h3 {
+    margin-block: 1em;
+    font-size: calc(var(--base-font-size) * var(--scale-factor));
+  }
+
+  h4 {
+    margin-block-start: 1em;
+    margin-block-end: 0;
+    font-size: var(--base-font-size);
+  }
+
+  code {
+    padding: 0.33em;
+    border-radius: 0.33em;
+    font-size: smaller;
+    background-color: whitesmoke;
+  }
+
+  blockquote {
+    padding-inline-start: var(--space);
+    border-left: 4px solid whitesmoke;
+  }
+
+  hr {
+    margin-block: calc(var(--space) * 2);
+    border: 2px solid whitesmoke;
+  }
 }

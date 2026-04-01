@@ -7,17 +7,18 @@
 
 ## Typography spacing
 
-Bones uses a typography grid inspired by Richard Rutter's article [Compose to a Vertical Rhythym](https://24ways.org/2006/compose-to-a-vertical-rhythm). The basic principle is that text sizes and spaces should be a multiple of some base value. Larger textual elements have larger spaces around them.
+Bones uses sensible, legible sizes for text by default. The base font size is 1.25rem, which translates to 20px if unchanged. The base line-height is 1.5, which results in a line height of 30px.
+
+The default space unit, just called `--space`, defaults to the font size multiplied by the line height: 30px.
 
 Spacing CSS variables:
 - `--base-font-size` <span id="base-font-size-value"></span>
 - `--base-line-height` <span id="base-line-height-value"></span>
-
-The basic space unit is equal to `--base-font-size` * `--base-line-height`. By default this is 32px.
+- `--space` <span id="space-value"></span>
 
 ## Typography scaling
 
-Text and heading sizes grow on a gradual scale. Each level of heading, ascending from h4 to h1, is larger than the previous by a factor of `--scale-factor`.
+Text and heading sizes grow on a gradual scale. Each level of heading, ascending from h4 to h1, is larger than the previous by a factor of `--scale-factor`. Larger headings have larger margins.
 
 Scaling CSS variables:
 - `--scale-factor` <span id="scale-factor-value"></span>
@@ -26,19 +27,19 @@ Scaling CSS variables:
 
 > #### Heading 4
 >
-> Fourth-level headings are the same size as body text and have no line space between them and the content that follows.
+> Fourth-level headings are the same size as body text.
 
 > ### Heading 3
 >
-> Third-level headings are larger than body text and have no line space between them and the content that follows.
+> Third-level headings are larger than body text and have top and bottom margins.
 
 > ## Heading 2
 >
-> Second-level headings are larger than third-level and have one line space between them and the content that follows.
+> Second-level headings are larger than third-level and have top and bottom margins.
 
 > # Heading 1
 >
-> The top-level heading is the largest and has two line spaces between it and the content that follows.
+> The top-level heading is the largest and has the largest margins.
 
 ## Font stacks
 
@@ -63,6 +64,9 @@ Images and videos won't exceed their container width by default.
 
   const baseLineHeight = rootStyles.getPropertyValue("--base-line-height").trim();
   document.getElementById("base-line-height-value").innerText = `(${baseLineHeight})`;
+
+  const space = rootStyles.getPropertyValue("--space").trim();
+  document.getElementById("space-value").innerText = `(${space})`;
 
   const scaleFactor = rootStyles.getPropertyValue("--scale-factor").trim();
   document.getElementById("scale-factor-value").innerText = `(${scaleFactor})`;

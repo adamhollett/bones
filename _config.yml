@@ -12,6 +12,8 @@ exclude:
   - Rakefile
   - readme.md
 
+livereload: true
+
 liquid:
   error_mode: strict
 
